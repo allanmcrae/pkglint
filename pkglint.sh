@@ -31,8 +31,9 @@ pkgdir=$(mktemp -d -t pkglint.XXXXXXXX)
 
 tar -xf $1 -C $pkgdir
 
-# obtain the package archtecture from the .PKGINFO file
+# obtain needed information from the .PKGIFNO file
 arch=$(sed -n 's/^arch = //p' $pkgdir/.PKGINFO)
+backup=($(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO))
 
 # the build_references check requires variables we are unable to determine the value of
 # set them to unlikely values
