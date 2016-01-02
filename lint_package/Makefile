@@ -2,6 +2,7 @@ SCRIPTS = \
 	any_elf.sh \
 	elf_location.sh \
 	fhs_root.sh \
+	fhs_usr.sh \
 	rpath.sh
 
 libmakepkgdir = /usr/share/makepkg
