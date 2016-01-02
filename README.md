@@ -29,11 +29,12 @@ splitpkgfunctions   : Checks that all package_* functions exist.
 ```
 infodirectory       : Checks for info directory file.
 libtool             : Checks for libtool (*.la) files.
+perllocal           : Verifies the absence of perllocal.pod.
 ```
 
 Notes: 
-- Arch has PURGE_TARGETS set to remove the info directory file, making this check obsolete.
-- Arch default is `'!libtool'`, so a PKGBUILD requires `options=('libtool')` to have a libtool file. So there is no need for the libtool warning.
+- Arch has PURGE_TARGETS set to remove the info directory file, and *.pod files making those checks obsolete.
+- Arch default is `'!libtool'`, so a PKGBUILD explicitly requires `options=('libtool')` to have a libtool file.
 
 ### Unhandled namcap rules
 
@@ -56,7 +57,6 @@ licensepkg          : Verifies license is included in a package file
 lots-of-docs        : See if a package is carrying more documentation than it should
 mimedesktop         : Check that MIME associations are updated
 mimefiles           : Check for files in /usr/share/mime
-perllocal           : Verifies the absence of perllocal.pod.
 permissions         : Checks file permissions.
 rubypaths           : Verifies correct usage of folders by ruby packages
 scrollkeeper        : Verifies that there aren't any scrollkeeper directories.
