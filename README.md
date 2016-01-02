@@ -7,7 +7,10 @@ Implementation of namcap rules for libmakepkg
 
 ```
 anyelf              : Check for ELF files to see if a package should be 'any' architecture
+directoryname       : Checks for standard directories.
 elfpaths            : Check about ELF files outside some standard paths.
+fhs-infopages       : Verifies correct installation of info pages
+fhs-manpages        : Verifies correct installation of man pages
 rpath               : Verifies correct and secure RPATH for files.
 ```
 
@@ -37,13 +40,10 @@ Notes:
 ```
 capsnamespkg        : Verifies package name in package does not include upper case letters
 carch               : Verifies that no specific host type is used
-directoryname       : Checks for standard directories.
 elfexecstack        : Check for executable stacks in ELF files.
 elftextrel          : Check for text relocations in ELF files.
 emptydir            : Warns about empty directories in a package
 extravars           : Verifies that extra variables start with an underscore
-fhs-infopages       : Verifies correct installation of info pages
-fhs-manpages        : Verifies correct installation of man pages
 filenames           : Checks for invalid filenames.
 fileownership       : Checks file ownership.
 giomodules          : Check that GIO modules are registered
