@@ -24,10 +24,12 @@ splitpkgfunctions   : Checks that all package_* functions exist.
 
 **Other**
 ```
+infodirectory       : Checks for info directory file.
 libtool             : Checks for libtool (*.la) files.
 ```
 
 Notes: 
+- Arch has PURGE_TARGETS set to remove the info directory file, making this check obsolete.
 - Arch default is `'!libtool'`, so a PKGBUILD requires `options=('libtool')` to have a libtool file. So there is no need for the libtool warning.
 
 ### Unhandled namcap rules
@@ -49,7 +51,6 @@ glibschemas         : Check that dconf schemas are compiled
 gnomemime           : Checks for generated GNOME mime files
 hardlinks           : Look for cross-directory/partition hard links
 hicoloricons        : Checks whether the hicolor icon cache is updated.
-infodirectory       : Checks for info directory file.
 infoinstall         : Checks that info files are correctly installed.
 invalidstartdir     : Looks for references to $startdir
 javafiles           : Check for existence of Java classes or JARs
