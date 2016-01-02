@@ -37,13 +37,11 @@ Notes:
 
 ### Unhandled namcap rules
 
+**Package Checks**
 ```
-capsnamespkg        : Verifies package name in package does not include upper case letters
-carch               : Verifies that no specific host type is used
 elfexecstack        : Check for executable stacks in ELF files.
 elftextrel          : Check for text relocations in ELF files.
 emptydir            : Warns about empty directories in a package
-extravars           : Verifies that extra variables start with an underscore
 filenames           : Checks for invalid filenames.
 fileownership       : Checks file ownership.
 giomodules          : Check that GIO modules are registered
@@ -52,24 +50,32 @@ gnomemime           : Checks for generated GNOME mime files
 hardlinks           : Look for cross-directory/partition hard links
 hicoloricons        : Checks whether the hicolor icon cache is updated.
 infoinstall         : Checks that info files are correctly installed.
-invalidstartdir     : Looks for references to $startdir
 javafiles           : Check for existence of Java classes or JARs
 kdeprograms         : Checks that KDE programs have kdebase-runtime as a dependency
-license             : Verifies license is included in a PKGBUILD
 licensepkg          : Verifies license is included in a package file
 lots-of-docs        : See if a package is carrying more documentation than it should
 mimedesktop         : Check that MIME associations are updated
 mimefiles           : Check for files in /usr/share/mime
 perllocal           : Verifies the absence of perllocal.pod.
 permissions         : Checks file permissions.
-pkgnameindesc       : Verifies if the package name is included on package description
 rubypaths           : Verifies correct usage of folders by ruby packages
 scrollkeeper        : Verifies that there aren't any scrollkeeper directories.
-sfurl               : Checks for proper sourceforge URLs
 shebangdepends      : Checks dependencies semi-smartly.
 sodepends           : Checks dependencies caused by linked shared libraries
-splitpkgmakedeps    : Checks that a split PKGBUILD has enough makedeps.
 symlink             : Checks that symlinks point to the right place
+```
+
+
+**PKGBUILD Checks**
+```
+capsnamespkg        : Verifies package name in package does not include upper case letters
+carch               : Verifies that no specific host type is used
+extravars           : Verifies that extra variables start with an underscore
+invalidstartdir     : Looks for references to $startdir
+license             : Verifies license is included in a PKGBUILD
+pkgnameindesc       : Verifies if the package name is included on package description
+sfurl               : Checks for proper sourceforge URLs
+splitpkgmakedeps    : Checks that a split PKGBUILD has enough makedeps.
 tags                : Looks for Maintainer and Contributor comments
 urlpkg              : Verifies url is included in a package file
 ```
