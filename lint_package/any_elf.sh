@@ -33,8 +33,11 @@ warn_any_elf() {
 	local arch=$(get_pkg_arch)
 
 	if [[ $arch = "any" ]]; then
-		if find "${pkgdir}" -type f -print0 | xargs -0 file | grep ELF &> /dev/null; then
-			warning "$(gettext "Package for '%s' architecture contains %s files")" "any" "ELF"
-		fi
+		while read -r filename; do
+			if file $filename | grep -q ELF; then
+				warning "$(gettext "Package for '%s' architecture contains %s files")" "any" "ELF"
+				break
+			fi
+		done < <(find "$pkgdir" -type f)
 	fi
 }
