@@ -30,7 +30,7 @@ source "$LIBRARY/util/util.sh"
 lint_package_functions+=('warn_fhs_usr')
 
 warn_fhs_usr() {
-	local usr_dirs=('bin' 'inlcude' 'lib' 'lib32' 'local' 'share' 'src')
+	local usr_dirs=('bin' 'include' 'lib' 'lib32' 'local' 'share' 'src')
 	local usr_symlinks=('lib64' 'sbin')
 
 	# only given directories are allowed in usr/
