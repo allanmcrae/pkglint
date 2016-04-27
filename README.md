@@ -25,6 +25,15 @@ missingbackups      : Backup files listed in package should exist
 splitpkgfunctions   : Checks that all package_* functions exist.
 ```
 
+**Handled by hooks**
+```
+giomodules          : Check that GIO modules are registered
+glibschemas         : Check that dconf schemas are compiled
+hicoloricons        : Checks whether the hicolor icon cache is updated.
+infoinstall         : Checks that info files are correctly installed.
+mimedesktop         : Check that MIME associations are updated
+```
+
 **Other**
 ```
 infodirectory       : Checks for info directory file.
@@ -45,17 +54,12 @@ elftextrel          : Check for text relocations in ELF files.
 emptydir            : Warns about empty directories in a package
 filenames           : Checks for invalid filenames.
 fileownership       : Checks file ownership.
-giomodules          : Check that GIO modules are registered
-glibschemas         : Check that dconf schemas are compiled
 gnomemime           : Checks for generated GNOME mime files
 hardlinks           : Look for cross-directory/partition hard links
-hicoloricons        : Checks whether the hicolor icon cache is updated.
-infoinstall         : Checks that info files are correctly installed.
 javafiles           : Check for existence of Java classes or JARs
 kdeprograms         : Checks that KDE programs have kdebase-runtime as a dependency
 licensepkg          : Verifies license is included in a package file
 lots-of-docs        : See if a package is carrying more documentation than it should
-mimedesktop         : Check that MIME associations are updated
 mimefiles           : Check for files in /usr/share/mime
 permissions         : Checks file permissions.
 rubypaths           : Verifies correct usage of folders by ruby packages
