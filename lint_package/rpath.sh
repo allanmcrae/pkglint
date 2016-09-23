@@ -29,11 +29,13 @@ source "$LIBRARY/util/message.sh"
 lint_package_functions+=('warn_rpath')
 
 warn_rpath() {
+	local IFS=":"
+
 	while read -r filename; do
 		if [[ $(head -c4 "$filename" | tr -d \\0) == $'\x7fELF' ]]; then
-			IFS=":" rpath=($(readelf -d "$filename" 2>/dev/null | sed -nr 's/.*Library rpath: \[(.*)\].*/\1/p'))
+			rpath=($(readelf -d "$filename" 2>/dev/null | sed -nr 's/.*Library rpath: \[(.*)\].*/\1/p'))
 			warn=0
-			
+
 			for rp in ${rpath[@]}; do
 				case $rp in
 					/lib | /usr/lib | /usr/lib32 | \$ORIGIN | \${ORIGIN})
@@ -52,9 +54,9 @@ warn_rpath() {
 						warn=1
 						;;
 				esac
-			
+
 			done
-			
+
 			if (( warn )); then
 				warning "$(gettext "Package file contains insecure RPATH: '%s'")" "${filename#$pkgdir/}"
 			fi
