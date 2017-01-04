@@ -30,7 +30,7 @@ lint_package_functions+=('warn_rpath')
 
 warn_rpath() {
 	while read -r filename; do
-		if [[ $(head -c4 "$filename") == $'\x7fELF' ]]; then
+		if [[ $(head -c4 "$filename" | tr -d \\0) == $'\x7fELF' ]]; then
 			IFS=":" rpath=($(readelf -d "$filename" 2>/dev/null | sed -nr 's/.*Library rpath: \[(.*)\].*/\1/p'))
 			warn=0
 			
