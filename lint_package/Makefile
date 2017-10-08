@@ -4,7 +4,8 @@ SCRIPTS = \
 	fhs_misc.sh \
 	fhs_root.sh \
 	fhs_usr.sh \
-	rpath.sh
+	rpath.sh \
+	package_conflicts.sh
 
 libmakepkgdir = /usr/share/makepkg
 
@@ -15,4 +16,3 @@ install:
 	done
 
 .PHONY: install
-		
