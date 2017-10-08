@@ -43,3 +43,5 @@ srcdir=$(sed -n 's/^builddir = //p' $pkgdir/.BUILDINFO)
 rm -f $pkgdir/{.BUILDINFO,.INSTALL,.MTREE,.PKGINFO}
 
 lint_package
+
+rm -r $pkgdir
