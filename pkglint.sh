@@ -35,9 +35,9 @@ tar -xf $1 -C $pkgdir
 arch=$(sed -n 's/^arch = //p' $pkgdir/.PKGINFO)
 backup=($(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO))
 
-# the build_references check requires variables we are unable to determine the value of
-# set them to unlikely values
-srcdir=$(mktemp -d -u -t pkglint.srcdir.XXXXXXXX)
-pkgdirbase=$(mktemp -d -u -t pkglint.pkgdirbase.XXXXXXXX)
+# reconstruct base of srcdir from .BUILDINFO file
+# full path varies depending on whether BUILDDIR was set during building
+srcdir=$(sed -n 's/^builddir = //p' $pkgdir/.BUILDINFO)
+
 
 lint_package
