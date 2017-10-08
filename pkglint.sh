@@ -39,5 +39,7 @@ backup=($(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO))
 # full path varies depending on whether BUILDDIR was set during building
 srcdir=$(sed -n 's/^builddir = //p' $pkgdir/.BUILDINFO)
 
+# remove dotfiles from package root to avoid false positive results
+rm -f $pkgdir/{.BUILDINFO,.INSTALL,.MTREE,.PKGINFO}
 
 lint_package
