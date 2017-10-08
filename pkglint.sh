@@ -29,7 +29,7 @@ fi
 
 pkgdir=$(mktemp -d -t pkglint.XXXXXXXX)
 
-tar -xf $1 -C $pkgdir
+bsdtar -xf $1 -C $pkgdir
 
 # obtain needed information from the .PKGIFNO file
 arch=$(sed -n 's/^arch = //p' $pkgdir/.PKGINFO)
