@@ -32,6 +32,7 @@ glibschemas         : Check that dconf schemas are compiled
 hicoloricons        : Checks whether the hicolor icon cache is updated.
 infoinstall         : Checks that info files are correctly installed.
 mimedesktop         : Check that MIME associations are updated
+mimefiles           : Check for files in /usr/share/mime
 ```
 
 **Other**
@@ -50,7 +51,10 @@ Notes:
 **Package Checks**
 ```
 elfexecstack        : Check for executable stacks in ELF files.
+elfgnurelro         : Check for FULL RELRO in ELF files.
+elfnopie            : Check for no PIE ELF files.
 elftextrel          : Check for text relocations in ELF files.
+elfunstripped       : Check for unstripped ELF files.
 emptydir            : Warns about empty directories in a package
 filenames           : Checks for invalid filenames.
 fileownership       : Checks file ownership.
@@ -60,13 +64,15 @@ javafiles           : Check for existence of Java classes or JARs
 kdeprograms         : Checks that KDE programs have kdebase-runtime as a dependency
 licensepkg          : Verifies license is included in a package file
 lots-of-docs        : See if a package is carrying more documentation than it should
-mimefiles           : Check for files in /usr/share/mime
 permissions         : Checks file permissions.
+py_mtime            : Check for py timestamps that are ahead of pyc/pyo timestamps
 rubypaths           : Verifies correct usage of folders by ruby packages
 scrollkeeper        : Verifies that there aren't any scrollkeeper directories.
 shebangdepends      : Checks dependencies semi-smartly.
+systemdlocation     : Checks for systemd files in /etc/systemd/system/
 sodepends           : Checks dependencies caused by linked shared libraries
 symlink             : Checks that symlinks point to the right place
+unusedsodepends     : Checks for unused dependencies caused by linked shared libraries
 ```
 
 
@@ -74,14 +80,22 @@ symlink             : Checks that symlinks point to the right place
 ```
 capsnamespkg        : Verifies package name in package does not include upper case letters
 carch               : Verifies that no specific host type is used
+description         : Verifies that the description is set in a PKGBUILD
+externalhooks       : Check the .INSTALL for commands covered by hooks
 extravars           : Verifies that extra variables start with an underscore
+hookdepends         : Check for redundant hook dependencies
 invalidstartdir     : Looks for references to $startdir
 license             : Verifies license is included in a PKGBUILD
+makepkgfunctions    : Looks for calls to makepkg functionality
+non-unique-source   : Verifies the downloaded sources have a unique filename
+pathdepends         : Check for simple implicit path dependencies
 pkgnameindesc       : Verifies if the package name is included on package description
+redundant_makedepends: Check for redundant make dependencies
 sfurl               : Checks for proper sourceforge URLs
 splitpkgmakedeps    : Checks that a split PKGBUILD has enough makedeps.
 tags                : Looks for Maintainer and Contributor comments
 urlpkg              : Verifies url is included in a package file
+vcs_makedepends     : Verify make dependencies for VCS sources
 ```
 
 
