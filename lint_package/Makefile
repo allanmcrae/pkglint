@@ -1,6 +1,7 @@
 SCRIPTS = \
 	any_elf.sh \
 	elf_location.sh \
+	empty_dir.sh \
 	fhs_misc.sh \
 	fhs_root.sh \
 	fhs_usr.sh \
@@ -15,4 +16,3 @@ install:
 	done
 
 .PHONY: install
-		
