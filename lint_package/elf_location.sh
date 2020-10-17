@@ -38,7 +38,7 @@ warn_elf_location() {
 			fi
 		done
 
-		if file $filename | grep -q ELF; then
+		if [[ $(head -c4 "$filename" | tr -d \\0) == $'\x7fELF' ]]; then
 			warning "$(gettext "%s files located in non-standard directories")" "ELF"
 			break
 		fi
