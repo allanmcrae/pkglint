@@ -34,7 +34,7 @@ warn_any_elf() {
 
 	if [[ $arch = "any" ]]; then
 		while read -r filename; do
-			if file $filename | grep -q ELF; then
+			if [[ $(head -c4 "$filename" | tr -d \\0) == $'\x7fELF' ]]; then
 				warning "$(gettext "Package for '%s' architecture contains %s files")" "any" "ELF"
 				break
 			fi
