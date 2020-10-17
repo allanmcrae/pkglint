@@ -13,6 +13,7 @@ emptydir            : Warns about empty directories in a package
 fhs-infopages       : Verifies correct installation of info pages
 fhs-manpages        : Verifies correct installation of man pages
 rpath               : Verifies correct and secure RPATH for files.
+systemdlocation     : Checks for systemd files in /etc/systemd/system/
 ```
 
 ### Ignored namcap rules
@@ -69,7 +70,6 @@ py_mtime            : Check for py timestamps that are ahead of pyc/pyo timestam
 rubypaths           : Verifies correct usage of folders by ruby packages
 scrollkeeper        : Verifies that there aren't any scrollkeeper directories.
 shebangdepends      : Checks dependencies semi-smartly.
-systemdlocation     : Checks for systemd files in /etc/systemd/system/
 sodepends           : Checks dependencies caused by linked shared libraries
 symlink             : Checks that symlinks point to the right place
 unusedsodepends     : Checks for unused dependencies caused by linked shared libraries

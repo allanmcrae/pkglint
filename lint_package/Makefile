@@ -5,7 +5,8 @@ SCRIPTS = \
 	fhs_misc.sh \
 	fhs_root.sh \
 	fhs_usr.sh \
-	rpath.sh
+	rpath.sh \
+	systemd_location.sh
 
 libmakepkgdir = /usr/share/makepkg
 
