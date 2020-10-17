@@ -8,6 +8,7 @@ SCRIPTS = \
 	fhs_usr.sh \
 	license.sh \
 	lots_of_docs.sh \
+	makedepends.sh \
 	rpath.sh \
 	systemd_location.sh
 

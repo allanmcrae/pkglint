@@ -15,6 +15,7 @@ fhs-manpages        : Verifies correct installation of man pages
 licensepkg          : Verifies license is included in a package file
 lots-of-docs        : See if a package is carrying more documentation than it should
 pkgnameindesc       : Verifies if the package name is included on package description
+redundant_makedepends: Check for redundant make dependencies
 rpath               : Verifies correct and secure RPATH for files.
 systemdlocation     : Checks for systemd files in /etc/systemd/system/
 ```
@@ -90,7 +91,6 @@ license             : Verifies license is included in a PKGBUILD
 makepkgfunctions    : Looks for calls to makepkg functionality
 non-unique-source   : Verifies the downloaded sources have a unique filename
 pathdepends         : Check for simple implicit path dependencies
-redundant_makedepends: Check for redundant make dependencies
 sfurl               : Checks for proper sourceforge URLs
 splitpkgmakedeps    : Checks that a split PKGBUILD has enough makedeps.
 tags                : Looks for Maintainer and Contributor comments
