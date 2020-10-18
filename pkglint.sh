@@ -35,6 +35,7 @@ bsdtar -xf $1 -C $pkgdir
 pkgname=$(sed -n 's/^pkgname = //p' $pkgdir/.PKGINFO)
 pkgdesc=$(sed -n 's/^pkgdesc = //p' $pkgdir/.PKGINFO)
 arch=$(sed -n 's/^arch = //p' $pkgdir/.PKGINFO)
+mapfile -t license < <(sed -nr 's/^license = //p' $pkgdir/.PKGINFO)
 provides=($(sed -nr 's/^provides = //p' $pkgdir/.PKGINFO))
 backup=($(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO))
 

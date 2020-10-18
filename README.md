@@ -12,6 +12,7 @@ elfpaths            : Check about ELF files outside some standard paths.
 emptydir            : Warns about empty directories in a package
 fhs-infopages       : Verifies correct installation of info pages
 fhs-manpages        : Verifies correct installation of man pages
+licensepkg          : Verifies license is included in a package file
 lots-of-docs        : See if a package is carrying more documentation than it should
 pkgnameindesc       : Verifies if the package name is included on package description
 rpath               : Verifies correct and secure RPATH for files.
@@ -65,7 +66,6 @@ gnomemime           : Checks for generated GNOME mime files
 hardlinks           : Look for cross-directory/partition hard links
 javafiles           : Check for existence of Java classes or JARs
 kdeprograms         : Checks that KDE programs have kdebase-runtime as a dependency
-licensepkg          : Verifies license is included in a package file
 permissions         : Checks file permissions.
 py_mtime            : Check for py timestamps that are ahead of pyc/pyo timestamps
 rubypaths           : Verifies correct usage of folders by ruby packages

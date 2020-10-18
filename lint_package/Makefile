@@ -6,6 +6,7 @@ SCRIPTS = \
 	fhs_misc.sh \
 	fhs_root.sh \
 	fhs_usr.sh \
+	license.sh \
 	lots_of_docs.sh \
 	rpath.sh \
 	systemd_location.sh
