@@ -1,5 +1,6 @@
 SCRIPTS = \
 	any_elf.sh \
+	description.sh \
 	elf_location.sh \
 	empty_dir.sh \
 	fhs_misc.sh \

@@ -33,6 +33,7 @@ bsdtar -xf $1 -C $pkgdir
 
 # obtain needed information from the .PKGIFNO file
 pkgname=$(sed -n 's/^pkgname = //p' $pkgdir/.PKGINFO)
+pkgdesc=$(sed -n 's/^pkgdesc = //p' $pkgdir/.PKGINFO)
 arch=$(sed -n 's/^arch = //p' $pkgdir/.PKGINFO)
 provides=($(sed -nr 's/^provides = //p' $pkgdir/.PKGINFO))
 backup=($(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO))
