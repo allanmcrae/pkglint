@@ -36,8 +36,8 @@ pkgname=$(sed -n 's/^pkgname = //p' $pkgdir/.PKGINFO)
 pkgdesc=$(sed -n 's/^pkgdesc = //p' $pkgdir/.PKGINFO)
 arch=$(sed -n 's/^arch = //p' $pkgdir/.PKGINFO)
 mapfile -t license < <(sed -nr 's/^license = //p' $pkgdir/.PKGINFO)
-provides=($(sed -nr 's/^provides = //p' $pkgdir/.PKGINFO))
-backup=($(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO))
+mapfile -t provides < <(sed -nr 's/^provides = //p' $pkgdir/.PKGINFO)
+mapfile -t backup < <(sed -nr 's/^backup = //p' $pkgdir/.PKGINFO)
 
 # reconstruct base of srcdir from .BUILDINFO file
 # full path varies depending on whether BUILDDIR was set during building
