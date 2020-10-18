@@ -2,6 +2,7 @@ SCRIPTS = \
 	any_elf.sh \
 	description.sh \
 	elf_location.sh \
+	elf_unstripped.sh \
 	empty_dir.sh \
 	fhs_misc.sh \
 	fhs_root.sh \
