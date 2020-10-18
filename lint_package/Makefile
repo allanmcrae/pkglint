@@ -1,6 +1,7 @@
 SCRIPTS = \
 	any_elf.sh \
 	description.sh \
+	elf_execstack.sh \
 	elf_location.sh \
 	elf_unstripped.sh \
 	empty_dir.sh \
