@@ -12,6 +12,7 @@ elfexecstack        : Check for executable stacks in ELF files.
 elfgnurelro         : Check for FULL RELRO in ELF files.
 elfnopie            : Check for no PIE ELF files.
 elfpaths            : Check about ELF files outside some standard paths.
+elftextrel          : Check for text relocations in ELF files.
 elfunstripped       : Check for unstripped ELF files.
 emptydir            : Warns about empty directories in a package
 fhs-infopages       : Verifies correct installation of info pages
@@ -60,7 +61,6 @@ Notes:
 
 **Package Checks**
 ```
-elftextrel          : Check for text relocations in ELF files.
 filenames           : Checks for invalid filenames.
 fileownership       : Checks file ownership.
 gnomemime           : Checks for generated GNOME mime files

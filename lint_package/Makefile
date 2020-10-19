@@ -5,6 +5,7 @@ SCRIPTS = \
 	elf_location.sh \
 	elf_nopie.sh \
 	elf_relro.sh \
+	elf_textrel.sh \
 	elf_unstripped.sh \
 	empty_dir.sh \
 	fhs_misc.sh \
