@@ -10,6 +10,7 @@ anyelf              : Check for ELF files to see if a package should be 'any' ar
 directoryname       : Checks for standard directories.
 elfexecstack        : Check for executable stacks in ELF files.
 elfgnurelro         : Check for FULL RELRO in ELF files.
+elfnopie            : Check for no PIE ELF files.
 elfpaths            : Check about ELF files outside some standard paths.
 elfunstripped       : Check for unstripped ELF files.
 emptydir            : Warns about empty directories in a package
@@ -59,7 +60,6 @@ Notes:
 
 **Package Checks**
 ```
-elfnopie            : Check for no PIE ELF files.
 elftextrel          : Check for text relocations in ELF files.
 filenames           : Checks for invalid filenames.
 fileownership       : Checks file ownership.

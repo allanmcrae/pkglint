@@ -3,6 +3,7 @@ SCRIPTS = \
 	description.sh \
 	elf_execstack.sh \
 	elf_location.sh \
+	elf_nopie.sh \
 	elf_relro.sh \
 	elf_unstripped.sh \
 	empty_dir.sh \
