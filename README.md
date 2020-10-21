@@ -22,6 +22,7 @@ lots-of-docs        : See if a package is carrying more documentation than it sh
 pkgnameindesc       : Verifies if the package name is included on package description
 redundant_makedepends: Check for redundant make dependencies
 rpath               : Verifies correct and secure RPATH for files.
+rubypaths           : Verifies correct usage of folders by ruby packages
 systemdlocation     : Checks for systemd files in /etc/systemd/system/
 ```
 
@@ -69,7 +70,6 @@ javafiles           : Check for existence of Java classes or JARs
 kdeprograms         : Checks that KDE programs have kdebase-runtime as a dependency
 permissions         : Checks file permissions.
 py_mtime            : Check for py timestamps that are ahead of pyc/pyo timestamps
-rubypaths           : Verifies correct usage of folders by ruby packages
 scrollkeeper        : Verifies that there aren't any scrollkeeper directories.
 shebangdepends      : Checks dependencies semi-smartly.
 sodepends           : Checks dependencies caused by linked shared libraries

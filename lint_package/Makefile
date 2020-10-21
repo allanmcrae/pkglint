@@ -15,6 +15,7 @@ SCRIPTS = \
 	lots_of_docs.sh \
 	makedepends.sh \
 	rpath.sh \
+	ruby_path.sh \
 	systemd_location.sh
 
 libmakepkgdir = /usr/share/makepkg
