@@ -1,4 +1,5 @@
 SCRIPTS = \
+	makedepends_vcs.sh \
 	makepkg_functions.sh
 
 libmakepkgdir = /usr/share/makepkg

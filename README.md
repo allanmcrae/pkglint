@@ -25,6 +25,7 @@ redundant_makedepends: Check for redundant make dependencies
 rpath               : Verifies correct and secure RPATH for files.
 rubypaths           : Verifies correct usage of folders by ruby packages
 systemdlocation     : Checks for systemd files in /etc/systemd/system/
+vcs_makedepends     : Verify make dependencies for VCS sources
 ```
 
 ### Ignored namcap rules
@@ -95,7 +96,6 @@ sfurl               : Checks for proper sourceforge URLs
 splitpkgmakedeps    : Checks that a split PKGBUILD has enough makedeps.
 tags                : Looks for Maintainer and Contributor comments
 urlpkg              : Verifies url is included in a package file
-vcs_makedepends     : Verify make dependencies for VCS sources
 ```
 
 
