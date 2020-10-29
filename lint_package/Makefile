@@ -14,6 +14,7 @@ SCRIPTS = \
 	license.sh \
 	lots_of_docs.sh \
 	makedepends.sh \
+	pkgname_caps.sh \
 	rpath.sh \
 	ruby_path.sh \
 	systemd_location.sh

@@ -7,6 +7,7 @@ Implementation of namcap rules for libmakepkg
 
 ```
 anyelf              : Check for ELF files to see if a package should be 'any' architecture
+capsnamespkg        : Verifies package name in package does not include upper case letters
 directoryname       : Checks for standard directories.
 elfexecstack        : Check for executable stacks in ELF files.
 elfgnurelro         : Check for FULL RELRO in ELF files.
@@ -82,7 +83,6 @@ unusedsodepends     : Checks for unused dependencies caused by linked shared lib
 
 **PKGBUILD Checks**
 ```
-capsnamespkg        : Verifies package name in package does not include upper case letters
 carch               : Verifies that no specific host type is used
 description         : Verifies that the description is set in a PKGBUILD
 externalhooks       : Check the .INSTALL for commands covered by hooks
