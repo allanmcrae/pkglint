@@ -1,10 +1,23 @@
 SCRIPTS = \
 	any_elf.sh \
+	description.sh \
+	elf_execstack.sh \
 	elf_location.sh \
+	elf_nopie.sh \
+	elf_relro.sh \
+	elf_textrel.sh \
+	elf_unstripped.sh \
+	empty_dir.sh \
 	fhs_misc.sh \
 	fhs_root.sh \
 	fhs_usr.sh \
-	rpath.sh
+	license.sh \
+	lots_of_docs.sh \
+	makedepends.sh \
+	pkgname_caps.sh \
+	rpath.sh \
+	ruby_path.sh \
+	systemd_location.sh
 
 libmakepkgdir = /usr/share/makepkg
 
@@ -15,4 +28,3 @@ install:
 	done
 
 .PHONY: install
-		
